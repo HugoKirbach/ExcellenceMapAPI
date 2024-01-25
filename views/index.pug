@@ -1,6 +1,21 @@
 extends layout
 
 block content
-  h1 Bienvenue sur Ma Homepage
-  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac ante vel ex consequat vulputate. Sed ultricies sapien ut ipsum imperdiet, in aliquet velit fermentum.
+  h1 Bienvenue sur Excellence Map
 
+  // Formulaire pour les adresses de départ et de destination
+  form.mt-4
+    div.form-row
+      div.form-group.col-md-6
+        label(for="start-address") Start address
+        input#adresseDepart.form-control(type="text", placeholder="Input start address")
+
+      div.form-group.col-md-6
+        label(for="end-address") End address
+        input#adresseDestination.form-control(type="text", placeholder="Input end address")
+
+    button.btn.btn-primary(type="submit") Rechercher
+
+  // Carte
+  div#map.mt-4
+    iframe(width="600", height="400", frameborder="0", scrolling="no", marginheight="0", marginwidth="0", src="https://www.openstreetmap.org/export/embed.html?bbox=2.2241,48.8153,2.4699,48.9022&amp;layer=mapnik")
