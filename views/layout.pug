@@ -1,7 +1,41 @@
 doctype html
-html
+html(lang="fr")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Excellence Map
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css", crossorigin="anonymous")
+
   body
-    block content
+    header
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href="#") Excellence Map
+
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+
+        div.collapse.navbar-collapse#navbarNav
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href="#") Accueil
+
+            li.nav-item
+              a.nav-link(href="#") À propos
+
+            li.nav-item
+              a.nav-link(href="#") Services
+
+            li.nav-item
+              a.nav-link(href="#") Contact
+
+    section.container.mt-5
+      block content
+
+    footer.footer.bg-light.py-3
+      div.container.text-center
+        p Copyright © 2024 Ma Homepage. Tous droits réservés.
+
+  script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUcXbBXr2e1e1", crossorigin="anonymous")
+  script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js", integrity="sha384-XbCg1i1K1PDJMO9/6bfmqqW8UFAzZ/S1SNH3S+LxtLXRqQ8Lbd+rsZizOqBfDAha", crossorigin="anonymous")
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js", integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyBR8cZ7/RY5I5HhfcR9L6H6f5UJlW++Kb", crossorigin="anonymous")
+
